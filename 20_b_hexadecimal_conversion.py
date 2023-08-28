@@ -58,3 +58,13 @@ def convert_h_to_d(number):
 
 #print(convert_d_to_h(42))
 print(convert_h_to_d("10"))
+
+#of course, we can just do this:
+num = 26
+hex_num=f"{num:02X}"
+print(hex_num)
+
+#or
+hex_num = 0x1A
+dec = f"{hex_num:d}"
+print(dec)

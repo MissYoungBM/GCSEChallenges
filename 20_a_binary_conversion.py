@@ -47,5 +47,16 @@ def convert_b_to_d(number):
     return int(denary)
 #end def
 
-print(convert_d_to_b(15, 8))
-print(convert_b_to_d("00011111"))
+#print(convert_d_to_b(15, 8))
+#print(convert_b_to_d("00011111"))
+
+#of course, we can just do this:
+num = 16
+bin_num=bin(num)
+# bin_num=f"{num:08b}" use this if we want to have a string with a specific number of bits
+print(bin_num)
+
+# or
+bin_num = 0b0011111
+dec = int(bin_num)
+print(bin_num)
