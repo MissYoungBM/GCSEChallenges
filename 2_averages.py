@@ -3,22 +3,19 @@ Make a program that asks the user for a series of numbers until they either want
 program.
 """
 
-total = 0
-count = 0
-response = ""
+total: int = 0
+count: int = 0
 
-while response.lower() != "q":
-    response = input("Enter a number (or q to quit): ")
-    if response.lower() != "q":
-        if response.isnumeric():
-            value = int(response)
-            total += value
-            count += 1
-        else:
-            print("You need to enter a whole number or q\n")
-        # end if
-    # end if
+response: str = input("Enter a number (or q to quit or a to print average): ")
+while response.lower() != "q" and response.lower() != "a":
+    # assume valid number input
+    value = int(response)
+    total += value
+    count += 1
+    response = input("Enter a number (or q to quit or a to print average): ")
 # end while
 
-average = total / count
-print("The average is " + str(average))
+if response.lower() == "a":
+    average = total / count
+    print("The average is " + str(average))
+#end if

@@ -5,7 +5,8 @@
 
 sentence = "Computer Science is great"
 total_vowels = 0
-for i in range(len(sentence)):  # could use char in sentence but trying to use first principles
+sentence_len = len(sentence)
+for i in range(sentence_len):  # could use char in sentence but trying to use first principles
     lower_char = sentence[i].lower()
     # could use "if lower_char in vowels" but trying to use first principles
     if lower_char == "a" or lower_char == "e" or lower_char == "i" or lower_char == "o" or lower_char == "u":

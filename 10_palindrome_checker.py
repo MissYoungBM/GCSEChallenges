@@ -3,6 +3,7 @@ Checks if the string entered by the user is a palindrome. A palindrome is a word
 backwards like “racecar”.
 """
 
+# this is the 'simplest' way but not the most efficient
 word = input("Enter a word to check if it is a palindrome: ")
 # word = "racecar1"
 
@@ -38,3 +39,19 @@ else:
 # #end def
 #
 # reverse("racecar")
+
+
+def isPalindrome(word):
+    """
+    This is a more 'efficient' algorithm.
+    """
+    start = 0
+    end = len(word) - 1
+    while start <= end and word[start] == word[end]:
+        start += 1
+        end -= 1
+    #end of
+    return start >= end
+#end def
+
+print(isPalindrome(word))
